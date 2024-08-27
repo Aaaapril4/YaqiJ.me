@@ -4,30 +4,33 @@ import Pub from "@/app/components/pub";
 import { 
   Popover,
   PopoverContent,
-  PopoverTrigger
+  PopoverTrigger,
+  PopoverAnchor
  } from "@/app/ui/popover";
 
 export default function Home() {
   return (
     <main className=" flex flex-col items-start lg:flex-row">
 
-      <Side className='border w-full h-auto xl:max-w-xl lg:h-screen'/>
+      <Side className='border w-full h-auto lg:h-screen'/>
 
-      <div className="flex justify-center items-start w-full overflow-y-auto min-h-screen border bg-[#FFFEFB] text-[#27272A]">
-        <div className='grid grid-cols-6 border w-full gap-4 max-w-xl lg:max-w-4xl p-4 xl:grid-cols-12 xl:grid-cols-12'>
-
+      <div className="flex justify-center items-start w-full overflow-y-auto min-h-screen border bg-[#FFFEFB] text-[#27272A] relative">
+        <div className='relative grid grid-cols-6 border w-full gap-4 max-w-xl lg:max-w-4xl p-4 xl:grid-cols-12 xl:grid-cols-12'>
           <Popover>
+            <PopoverAnchor asChild>
+              <div className="absolute w-full top-0 left-0 invisible" />
+            </PopoverAnchor>
             <PopoverTrigger asChild>
-              <Intro />
+                  <Intro className={"z-0"}/>
             </PopoverTrigger>
             <PopoverContent>
               <div>
-                <p>test</p>
+                test
               </div>
             </PopoverContent>
           </Popover>
           
-          <Pub />
+          <Pub className={"z-0"}/>
 
         </div>
       </div>
