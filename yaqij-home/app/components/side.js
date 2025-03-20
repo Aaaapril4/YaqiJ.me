@@ -15,7 +15,11 @@ const Side = ({ className }) => {
         <Box className={`${className} bg-[#FFFEFB] fixed left-0 h-screen transition-all duration-500 ease-in-out z-50 ${isExpanded ? 'w-screen' : 'w-1/2 xxl:w-1/3'}`}>
             <div className="h-full flex items-center justify-center">
                 <Container size="1" className={`flex flex-col items-center transition-all duration-500 ease-in-out ${isExpanded ? 'w-full' : 'w-1/2 xxl:w-1/3'}`}>
-                    <Avatar align="center" className={`m-4 transition-all duration-500 ease-in-out ${isExpanded ? 'w-64 h-64' : 'w-48 h-48'} mx-auto`}>
+                    <Avatar 
+                        align="center" 
+                        className={`p-2 m-4 transition-all duration-500 ease-in-out hover:scale-103 hover:drop-shadow-lg ${isExpanded ? 'w-64 h-64' : 'w-48 h-48'} mx-auto cursor-pointer rounded-full `}
+                        onClick={() => setIsExpanded(!isExpanded)}
+                    >
                         <AvatarImage src="/me.png" />
                         <AvatarFallback>YJ</AvatarFallback>
                     </Avatar>
@@ -53,15 +57,6 @@ const Side = ({ className }) => {
 
                     <Contacts className={`transition-all duration-500 ease-in-out transform ${isExpanded ? 'mt-4 -translate-y-4' : 'mt-4 translate-y-0'}`} />
                 </Container>
-
-                <Button 
-                    variant="ghost" 
-                    size="icon"
-                    className="absolute -right-4 top-4 z-50 bg-white rounded-full shadow-md hover:bg-gray-100"
-                    onClick={() => setIsExpanded(!isExpanded)}
-                >
-                    {isExpanded ? <ChevronLeft className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-                </Button>
             </div>
         </Box>
     );

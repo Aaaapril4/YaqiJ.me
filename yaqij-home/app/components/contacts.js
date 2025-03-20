@@ -10,22 +10,22 @@ const Contacts = ({ className }) => {
         <div className={`${className || ''} flex flex-row gap-12 justify-center`}>
             <div key={'email'}>
                 <Link href={'mailto:april.jyq@gmail.com'} target="_blank" rel="noopener noreferrer">
-                    <MdOutlineAlternateEmail size={40}/>
+                    <MdOutlineAlternateEmail size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </Link>
             </div>
             <div key={'github'}>
                 <Link href={'https://github.com/Aaaapril4'} target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={40}/>
+                    <FaGithub size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </Link>
             </div>
             <div key={'googlescholar'}>
                 <Link href={'https://scholar.google.com/citations?user=X1SoTQcAAAAJ'} target="_blank" rel="noopener noreferrer">
-                    <FaGoogleScholar size={40}/>
+                    <FaGoogleScholar size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </Link>
             </div>
             <div key={'linkedin'}>
                 <Link href={'https://www.linkedin.com/in/yaqi-jie'} target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={40}/>
+                    <FaLinkedin size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </Link>
             </div>
         </div>

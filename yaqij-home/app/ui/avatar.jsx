@@ -6,7 +6,7 @@ import * as AvatarPrimitive from "@radix-ui/react-avatar"
 const Avatar = React.forwardRef(({ className, ...props }, ref) => (
   <AvatarPrimitive.Root
     ref={ref}
-    className={`relative flex shrink-0 overflow-hidden rounded-full ${className || ''}`}
+    className={`relative flex shrink-0 overflow-hidden ${className || ''}`}
     {...props}
   />
 ))
@@ -15,7 +15,7 @@ Avatar.displayName = "Avatar"
 const AvatarImage = React.forwardRef(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={`aspect-square h-full w-full object-cover ${className || ''}`}
+    className={`aspect-square h-full w-full object-cover rounded-full ${className || ''}`}
     {...props}
   />
 ))
