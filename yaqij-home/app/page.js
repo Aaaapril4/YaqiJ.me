@@ -14,8 +14,9 @@ export default function Home() {
           <Side />
         </div>
 
-        <div className="w-1/2 min-h-screen p-8 flex justify-center items-start overflow-y-auto bg-[#FFFEFB] relative">
-          <div className='relative grid grid-cols-6 w-full gap-4 max-w-xl p-4 lg:max-w-4xl xl:grid-cols-12'>
+        <div className="w-1/2 min-h-screen overflow-y-auto p-8 flex justify-center items-start bg-[#FFFEFB] text-[#27272A] relative">
+          <div className='relative grid grid-cols-6 w-full gap-4 p-4 max-w-xl lg:max-w-4xl xl:grid-cols-12'>
+            <Intro className="content-fade-in" />
           </div>
         </div>
 
