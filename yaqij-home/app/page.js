@@ -8,8 +8,12 @@ import Intro from "@/app/components/Intro";
 
 export default function Home() {
   return (
-    <Theme accentColor="[#FFFEFB]" grayColor="slate" className="text-[#27272A]">
-      <div className="flex min-h-screen">
+    <Theme 
+      accentColor="[#FFFEFB]" 
+      grayColor="slate" 
+      className="text-[#27272A]"
+    >
+      <div className={`flex min-h-screen font-mono`}>
         <div className="w-1/2">
           <Side />
         </div>

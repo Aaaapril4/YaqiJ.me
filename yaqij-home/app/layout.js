@@ -1,7 +1,10 @@
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
-const mono = Roboto_Mono({ subsets: ["latin"] });
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "YaqiJ.me",
@@ -13,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       </head>
-      <body className={`${mono.className} content-fade-in`}>{children}</body>
+      <body style={{ fontFamily: "'Roboto Mono', monospace" }} className={`${robotoMono.className} content-fade-in`}>
+        {children}
+      </body>
     </html>
   );
 }
