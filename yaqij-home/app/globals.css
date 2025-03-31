@@ -93,10 +93,6 @@ body {
   transform: translate(0, 0);
 }
 
-.filter-popup {
-  background-image: url('@/public/me.png');
-  background-size: cover;
-}
 .blur-filter {
   margin: 0;
   padding: 0;
