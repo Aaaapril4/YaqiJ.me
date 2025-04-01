@@ -17,7 +17,7 @@ const Catchup = ({ className }) => {
 const CatchupContent = () => {
     return (
         <div>
-            <h2 className="text-2xl font-bold mb-6">What's I'm Working on</h2> 
+            <h2 className="text-2xl font-bold mb-6">What&apos;s I&apos;m Working on</h2> 
         </div>
     )
 }
