@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { Container, Flex, Text, Box, Button } from "@radix-ui/themes"
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Container, Flex, Text, Box } from "@radix-ui/themes"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/ui/avatar"
 import Contacts from "@/app/components/contacts";
