@@ -1,5 +1,6 @@
 import Block from "@/app/ui/block"
 import { RiArrowDownWideFill } from "react-icons/ri";
+import IntroContent from "@/app/content/intro.mdx";
 
 const Intro = ({ className }) => {
     return (
@@ -21,21 +22,4 @@ const Intro = ({ className }) => {
     )
 }
 
-const IntroContent = () => {
-    return (
-        <div>
-            <h2 className="text-2xl font-bold mb-6">About me</h2>
-            <p className="my-4">As a final-year PhD candidate in computational science and geophysics, I focus on cutting-edge interdisciplinary research in computational seismology. My research focus on:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                <li>Machine learning in seismology – advancing AI-driven earthquake detection and analysis</li>
-                <li>Optimization & cloud-based automation – streamlining large-scale workflows</li>
-                <li>High-performance computing (HPC) modeling – developing scalable solutions for seismic simulations</li>
-                </ul>
-            <p className="my-4">I am passionate about delivering high-quality results and uncovering stories behind data—translating complex information into meaningful insights.</p>
-            <p className="my-4">Beyond research, I have experience in full-stack web development, interning at Dow Chemical and Quantum Photonics Club.</p>
-            <p className="my-4">Outside of work, I enjoy snowboarding and stargazing and I love food! I love hearing new stories—so feel free to connect and chat! I’m open to collaborations on exciting projects that spark my interest.</p>
-            <p className="my-4">I am actively looking for a full-time <span className="font-bold">software engineer</span>, <span className="font-bold">machine learning engineer</span>, <span className="font-bold">research scientist</span>, or similar role and open to relocation, with a preference for Los Angeles region.</p>
-        </div>
-    )
-}
 export { Intro, IntroContent }

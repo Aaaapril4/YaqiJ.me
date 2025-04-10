@@ -1,6 +1,6 @@
 import Block from "@/app/ui/block"
 import { MdTipsAndUpdates } from "react-icons/md";
-
+import CatchupContent from "@/app/content/catchup.mdx";
 const Catchup = ({ className }) => {
     return (
         <Block className={`group ${className}`}>
@@ -11,14 +11,6 @@ const Catchup = ({ className }) => {
                 </div>
             </div>
         </Block>
-    )
-}
-
-const CatchupContent = () => {
-    return (
-        <div>
-            <h2 className="text-2xl font-bold mb-6">What&apos;s I&apos;m Working on</h2> 
-        </div>
     )
 }
 
