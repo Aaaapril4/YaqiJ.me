@@ -26,7 +26,7 @@ const IntroBlock = ({ className }) => {
 const Intro = ({ className }) => {
     return (
         <Popup 
-            className={`aspect-square ${className}`}
+            className={`${className}`}
             trigger={<IntroBlock className="content-fade-in" />}
             content={
             <IntroContent />

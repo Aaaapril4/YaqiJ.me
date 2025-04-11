@@ -16,7 +16,7 @@ const EducationBlock = ({ className }) => {
 const Education = ({ className }) => {
     return (
         <Popup 
-            className={`aspect-square ${className}`}
+            className={`${className}`}
             trigger={<EducationBlock className="content-fade-in" />}
             content={
             <EducationContent />

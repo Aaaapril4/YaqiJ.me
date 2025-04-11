@@ -22,15 +22,15 @@ export default function Home() {
         </div>
 
         <div className="w-1/2 min-h-screen overflow-y-auto p-8 flex justify-center items-start bg-[#FFFEFB] text-[#27272A] relative">
-          <div className='relative grid grid-cols-6 w-full gap-4 p-4 max-w-xl lg:max-w-4xl xl:grid-cols-12'>
+          <div className='relative grid grid-cols-6 grid-auto-rows-fr w-full gap-4 p-4 max-w-xl lg:max-w-4xl xl:grid-cols-12'>
             
-            <Intro className="col-span-6" />
+            <Intro className="col-span-6 row-span-6 aspect-square" />
 
-            <Education className="col-span-3" />
+            <Education className="col-span-3 row-span-3 aspect-square" />
 
-            <Publication className="col-span-3" />
+            <Publication className="col-span-3 row-span-3 aspect-square" />
 
-            <Catchup className="col-span-6" />
+            <Catchup className="col-span-6 row-span-3 aspect-[2/1]" />
             
           </div>
         </div>

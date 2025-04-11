@@ -19,7 +19,7 @@ const CatchupBlock = ({ className }) => {
 const Catchup = ({ className }) => {
     return (
         <Popup 
-            className={`aspect-[2/1] ${className}`}
+            className={`${className}`}
             trigger={<CatchupBlock className="content-fade-in" />}
             content={
                 <CatchupContent />

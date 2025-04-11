@@ -16,7 +16,7 @@ const PublicationBlock = ({ className }) => {
 const Publication = ({ className }) => {
     return (
         <Popup 
-            className={`aspect-square ${className}`}
+            className={`${className}`}
             trigger={<PublicationBlock className="content-fade-in" />}
             content={
                 <PublicationContent />
