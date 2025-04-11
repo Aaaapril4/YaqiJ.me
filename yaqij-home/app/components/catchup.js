@@ -1,9 +1,11 @@
 import Block from "@/app/ui/block"
 import { MdTipsAndUpdates } from "react-icons/md";
 import CatchupContent from "@/app/content/catchup.mdx";
-const Catchup = ({ className }) => {
+import { Popup } from "@/app/ui/popup";
+
+const CatchupBlock = ({ className }) => {
     return (
-        <Block className={`group ${className}`}>
+        <Block className={`group aspect-[2/1] ${className}`}>
             <div className="flex flex-col justify-center items-center p-12">
                 <div className="mt-4 transition-colors duration-300">
                     <span className="inline-block group-hover:hidden"><MdTipsAndUpdates size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg"/></span>
@@ -14,4 +16,17 @@ const Catchup = ({ className }) => {
     )
 }
 
-export { Catchup, CatchupContent }
+const Catchup = ({ className }) => {
+    return (
+        <Popup 
+            className={`${className}`}
+            trigger={<CatchupBlock className="content-fade-in" />}
+            content={
+                <CatchupContent />
+            }
+            title="What I'm Working On"
+            description="Current projects and activities"
+        />
+    )
+}
+export default Catchup;

@@ -1,6 +1,7 @@
 import * as React from "react"
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 import { IoClose } from "react-icons/io5";
+import DynamicTitle from "@/app/components/DynamicTitle";
 
 const Popover = PopoverPrimitive.Root
 const PopoverTrigger = PopoverPrimitive.Trigger
@@ -18,7 +19,7 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName
 
 const PopoverClose = PopoverPrimitive.Close
 
-const Popup = ({ trigger, content, className }) => {
+const Popup = ({ trigger, content, className, title, description }) => {
   return (
     <Popover>
         <PopoverAnchor asChild>
@@ -30,6 +31,7 @@ const Popup = ({ trigger, content, className }) => {
             </div>
         </PopoverTrigger>
         <PopoverContent>
+            <DynamicTitle title={title} description={description} />
             <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-3xl shadow-xl bg-[#FFFFFD] max-w-[900px] h-auto max-h-[90%] w-[90%] animate-in fade-in-0 zoom-in-90 duration-300 ease-out">
                 <PopoverClose className="absolute right-2 top-2 opacity-70 hover:opacity-100 transition-all duration-300 ease-out hover:scale-110">
                     <IoClose size={40} className="hover:scale-103 hover:drop-shadow-lg" />

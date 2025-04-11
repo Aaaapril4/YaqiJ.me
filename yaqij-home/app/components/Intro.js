@@ -1,10 +1,11 @@
 import Block from "@/app/ui/block"
 import { RiArrowDownWideFill } from "react-icons/ri";
 import IntroContent from "@/app/content/intro.mdx";
+import { Popup } from "@/app/ui/popup";
 
-const Intro = ({ className }) => {
+const IntroBlock = ({ className }) => {
     return (
-        <Block className={`group ${className}`}>
+        <Block className={`group aspect-square ${className}`}>
             <div className="justify-center items-center p-12">
                 <p className="mb-5 flex flex-row items-end">
                     <span className="group-hover:text-4xl text-3xl mr-4 transition-all"> HI </span>
@@ -22,4 +23,18 @@ const Intro = ({ className }) => {
     )
 }
 
-export { Intro, IntroContent }
+const Intro = ({ className }) => {
+    return (
+        <Popup 
+            className={`${className}`}
+            trigger={<IntroBlock className="content-fade-in" />}
+            content={
+            <IntroContent />
+            }
+            title="About Me"
+            description="Learn about Yaqi Jie"
+      />
+    )
+}
+
+export default Intro;
