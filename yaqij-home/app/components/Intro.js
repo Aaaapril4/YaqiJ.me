@@ -5,7 +5,7 @@ import { Popup } from "@/app/ui/popup";
 
 const IntroBlock = ({ className }) => {
     return (
-        <Block className={`group aspect-square ${className}`}>
+        <Block className={`group ${className}`}>
             <div className="justify-center items-center p-12">
                 <p className="mb-5 flex flex-row items-end">
                     <span className="group-hover:text-4xl text-3xl mr-4 transition-all"> HI </span>
@@ -26,7 +26,7 @@ const IntroBlock = ({ className }) => {
 const Intro = ({ className }) => {
     return (
         <Popup 
-            className={`${className}`}
+            className={`aspect-square ${className}`}
             trigger={<IntroBlock className="content-fade-in" />}
             content={
             <IntroContent />

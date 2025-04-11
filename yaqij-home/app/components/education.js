@@ -5,7 +5,7 @@ import { Popup } from "@/app/ui/popup";
 
 const EducationBlock = ({ className }) => {
     return (
-        <Block className={`group aspect-square ${className}`}>
+        <Block className={`group ${className}`}>
             <div className="justify-center items-center p-12">
                 <FaGraduationCap size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg"/>
             </div>
@@ -16,7 +16,7 @@ const EducationBlock = ({ className }) => {
 const Education = ({ className }) => {
     return (
         <Popup 
-            className={`${className}`}
+            className={`aspect-square ${className}`}
             trigger={<EducationBlock className="content-fade-in" />}
             content={
             <EducationContent />

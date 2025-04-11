@@ -36,7 +36,7 @@ const Popup = ({ trigger, content, className, title, description }) => {
                 <PopoverClose className="absolute right-2 top-2 opacity-70 hover:opacity-100 transition-all duration-300 ease-out hover:scale-110">
                     <IoClose size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </PopoverClose>
-                <div className="overflow-y-auto max-h-[80vh] my-10 mx-4 scrollbar-hide">
+                <div className="overflow-y-auto max-h-[80vh] my-10 mx-8 scrollbar-hide">
                 {content}
                 </div>
             </div>

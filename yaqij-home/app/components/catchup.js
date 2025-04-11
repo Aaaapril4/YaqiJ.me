@@ -5,7 +5,7 @@ import { Popup } from "@/app/ui/popup";
 
 const CatchupBlock = ({ className }) => {
     return (
-        <Block className={`group aspect-[2/1] ${className}`}>
+        <Block className={`group ${className}`}>
             <div className="flex flex-col justify-center items-center p-12">
                 <div className="mt-4 transition-colors duration-300">
                     <span className="inline-block group-hover:hidden"><MdTipsAndUpdates size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg"/></span>
@@ -19,7 +19,7 @@ const CatchupBlock = ({ className }) => {
 const Catchup = ({ className }) => {
     return (
         <Popup 
-            className={`${className}`}
+            className={`aspect-[2/1] ${className}`}
             trigger={<CatchupBlock className="content-fade-in" />}
             content={
                 <CatchupContent />

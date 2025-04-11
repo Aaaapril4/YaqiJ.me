@@ -5,7 +5,7 @@ import { Popup } from "@/app/ui/popup";
 
 const PublicationBlock = ({ className }) => {
     return (
-        <Block className={`group aspect-square ${className}`}>
+        <Block className={`group ${className}`}>
             <div className="justify-center items-center p-12">
                 <MdOutlineArticle size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg"/>
             </div>
@@ -16,10 +16,10 @@ const PublicationBlock = ({ className }) => {
 const Publication = ({ className }) => {
     return (
         <Popup 
-            className={`${className}`}
+            className={`aspect-square ${className}`}
             trigger={<PublicationBlock className="content-fade-in" />}
             content={
-            <PublicationContent />
+                <PublicationContent />
             }
             title="Publications"
             description="Research papers and publications"

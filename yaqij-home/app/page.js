@@ -6,9 +6,8 @@ import { Theme } from "@radix-ui/themes";
 import Side from "@/app/components/side";
 import Intro from "@/app/components/Intro";
 import Education from "@/app/components/education";
-import { Publication, PublicationContent } from "@/app/components/publication";
+import Publication from "@/app/components/publication";
 import Catchup from "@/app/components/catchup";
-import { Popup } from "@/app/ui/popup";
 
 export default function Home() {
   return (
