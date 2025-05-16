@@ -11,16 +11,13 @@ const ProjectBlock = ({ className, image, projectName, projectDescription, tags 
                     <Image
                         src={image}
                         alt={projectName}
-                        className="w-full h-full object-cover transition-all duration-300 group-hover:saturate-100 saturate-50 group-hover:opacity-100 opacity-70"
-                        style={{
-                            // maskImage: 'linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%)'
-                        }}
+                        className="w-full h-full object-cover transition-all duration-300 group-hover:saturate-100 saturate-60 group-hover:opacity-100 opacity-80"
                     />
                 </div>
                 
                 <div className="flex flex-col flex-grow justify-between">
                     <div>
-                        <p className="text-left text-2xl font-semibold my-3 mx-3">
+                        <p className="text-left text-2xl font-semibold my-2 mx-3">
                             {projectName}
                         </p>
                         <p className="text-left text-gray-600 mx-3">
@@ -58,6 +55,7 @@ const Project = ({ className, image, projectName, projectDescription, projectCon
             content={projectContent}
             title={projectName}
             description={projectDescription}
+            image={image}
       />
     )
 }
