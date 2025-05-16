@@ -3,7 +3,7 @@ import { Popup } from "@/app/ui/popup";
 import Image from "next/image";
 
 
-const ProjectBlock = ({ className, image, projectName, projectDescription }) => {
+const ProjectBlock = ({ className, image, projectName, projectDescription, tags }) => {
     return (
         <Block className={`group ${className}`}>
             <div className="w-full h-full flex flex-col p-0">
@@ -18,20 +18,32 @@ const ProjectBlock = ({ className, image, projectName, projectDescription }) => 
                     />
                 </div>
                 
-                <div className="flex flex-col">
-                    <p className="text-left text-2xl font-semibold my-3 mx-3">
-                        {projectName}
-                    </p>
-                    <p className="text-left text-gray-600 mx-3">
-                        {projectDescription}
-                    </p>
+                <div className="flex flex-col flex-grow justify-between">
+                    <div>
+                        <p className="text-left text-2xl font-semibold my-3 mx-3">
+                            {projectName}
+                        </p>
+                        <p className="text-left text-gray-600 mx-3">
+                            {projectDescription}
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mx-3 mt-auto mb-2">
+                        {tags?.map((tag, index) => (
+                            <span 
+                                key={index}
+                                className="px-2 py-1 text-sm bg-gray-100 text-gray-600 rounded-full"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Block>
     )
 }
 
-const Project = ({ className, image, projectName, projectDescription, projectContent }) => {
+const Project = ({ className, image, projectName, projectDescription, projectContent, tags }) => {
     return (
         <Popup 
             className={`${className}`}
@@ -39,7 +51,8 @@ const Project = ({ className, image, projectName, projectDescription, projectCon
                 <ProjectBlock 
                     image={image} 
                     projectName={projectName} 
-                    projectDescription={projectDescription} 
+                    projectDescription={projectDescription}
+                    tags={tags}
                     className="content-fade-in" 
                 />}
             content={projectContent}
