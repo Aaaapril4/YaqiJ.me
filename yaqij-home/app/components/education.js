@@ -7,7 +7,7 @@ const EducationBlock = ({ className }) => {
     return (
         <Block className={`group ${className}`}>
             <div className="justify-center items-center p-12">
-                <FaGraduationCap size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg"/>
+                <FaGraduationCap size={40} className="group-hover:scale-103 group-hover:drop-shadow-lg transition-all"/>
             </div>
         </Block>
     )

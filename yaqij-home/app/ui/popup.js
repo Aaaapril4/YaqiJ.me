@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as PopoverPrimitive from "@radix-ui/react-popover"
 import { IoClose } from "react-icons/io5";
-import DynamicTitle from "@/app/components/DynamicTitle";
+import DynamicTitle from "@/app/ui/DynamicTitle";
 
 const Popover = PopoverPrimitive.Root
 const PopoverTrigger = PopoverPrimitive.Trigger
