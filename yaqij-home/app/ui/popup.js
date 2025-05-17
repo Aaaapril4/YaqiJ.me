@@ -37,21 +37,23 @@ const Popup = ({ trigger, content, className, title, description, image = null }
                 <PopoverClose className="absolute right-2 top-2 opacity-70 hover:opacity-100 transition-all duration-300 ease-out hover:scale-110 z-50">
                     <IoClose size={40} className="hover:scale-103 hover:drop-shadow-lg" />
                 </PopoverClose>
+                <div className="w-full h-full scrollbar-hide overflow-y-auto rounded-3xl">
                 {image && (
-                    <div className="w-full h-60 overflow-hidden rounded-xl">
+                    <div className="w-full h-70 overflow-hidden shadow-md">
                         <Image 
                             src={image} 
                             alt={title} 
                             className="w-full h-full object-cover saturate-80 opacity-80" 
                             style={{
-                                maskImage: 'linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%)',
-                                objectPosition: 'center 60%'
+                                // maskImage: 'linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%)',
+                                objectPosition: 'center 70%'
                             }}
                         />
                     </div>
                 )}
-                <div className="overflow-y-auto max-h-[80vh] max-w-[900px] mx-auto my-6 center scrollbar-hide">
+                <div className="max-h-[80vh] max-w-[900px] mx-auto my-6 center">
                 {content}
+                </div>
                 </div>
             </div>
         </PopoverContent>

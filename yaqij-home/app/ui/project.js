@@ -1,7 +1,7 @@
 import Block from "@/app/ui/block"
 import { Popup } from "@/app/ui/popup";
 import Image from "next/image";
-
+import Tag from "@/app/components/tag";
 
 const ProjectBlock = ({ className, image, projectName, projectDescription, tags }) => {
     return (
@@ -24,16 +24,7 @@ const ProjectBlock = ({ className, image, projectName, projectDescription, tags 
                             {projectDescription}
                         </p>
                     </div>
-                    <div className="flex flex-wrap gap-2 mx-3 mt-auto mb-2">
-                        {tags?.map((tag, index) => (
-                            <span 
-                                key={index}
-                                className="px-2 py-1 text-sm bg-gray-100 text-gray-600 rounded-full"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
+                    <Tag tags={tags} className="mx-2" />
                 </div>
             </div>
         </Block>
