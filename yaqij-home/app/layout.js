@@ -1,5 +1,6 @@
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import 'katex/dist/katex.min.css';
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
