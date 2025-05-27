@@ -1,0 +1,21 @@
+import Tag from "@/app/components/tag";
+import Icons from "@/app/components/icons";
+
+# Fast and Robust Earthquake Location
+<Tag tags = {["Seismology", "Research"]} className="mt-[-1.2rem] mb-3"/>
+
+**Collaborators: Weiqiang Zhu, Bo Rong, S. Shawn Wei**
+
+Adloc is a high-performance package in Python for rapid and precise earthquake source parameter determination, even with sparse seismic phase data and significant outliers. This work was inspired by performance improvements to the GaMMA-1D associator.
+
+Adloc's core functionality involves minimizing the misfit between observed and theoretical seismic phase arrival times. This is achieved by:
+- Solving the eikonal equation for theoretical travel times using the efficient fast sweeping method.
+- Optimizing the earthquake's location ($\mathcal{x,y,z}$) and origin time ($\mathcal{t}$) by minimizing the objective function:
+  $$
+      \mathcal{\min_{x, y, z, t} L(x, y, z, t) = \sum_{i=1}^N \lambda_i L(t_i, \hat{t_i}(x, y, z, t))}
+  $$ 
+  where $\mathcal{t_i}$ is the observed arrival, $\mathcal{\hat{t_i}}$ is the theoretical arrival, and $\mathcal{λ_i}$ represents the phase probability.
+- Employing the Huber loss function ($\mathcal{L(t_i, \hat{t_i})}$) to reduce sensitivity to outliers often present in seismic data due to velocity structure variances.
+- Utilizing the L-BFGS algorithm for efficient non-linear optimization of the location parameters with gradients computed using automatic differentiation in PyTorch.
+---
+<Icons links = {{"github": "https://github.com/AI4EPS/ADLoc", "paper": "https://arxiv.org/abs/2502.10933"}}/>

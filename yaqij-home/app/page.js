@@ -3,11 +3,14 @@
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 
-import Side from "@/app/components/side";
-import Intro from "@/app/components/Intro";
-import Education from "@/app/components/education";
-import Publication from "@/app/components/publication";
-import Catchup from "@/app/components/catchup";
+import Side from "@/app/pages/side";
+import Intro from "@/app/pages/Intro";
+import Education from "@/app/pages/education";
+import Publication from "@/app/pages/publication";
+import Catchup from "@/app/pages/catchup";
+import Project from "@/app/components/project";
+import adloc from "@/app/images/adloc.jpeg";
+import AdlocContent from "@/app/contents/adloc.mdx";
 
 export default function Home() {
   return (
@@ -22,7 +25,7 @@ export default function Home() {
         </div>
 
         <div className="w-1/2 min-h-screen overflow-y-auto p-8 flex justify-center items-start bg-[#FFFEFB] text-[#27272A] relative">
-          <div className='relative grid grid-cols-6 grid-auto-rows-fr w-full gap-4 p-4 max-w-xl lg:max-w-4xl xl:grid-cols-12'>
+          <div className='relative grid grid-cols-6 grid-auto-rows-fr grid-flow-dense w-full gap-4 p-4 max-w-[400px] lg:max-w-[650px] xl:grid-cols-12'>
             
             <Intro className="col-span-6 row-span-6 aspect-square" />
 
@@ -30,8 +33,26 @@ export default function Home() {
 
             <Publication className="col-span-3 row-span-3 aspect-square" />
 
+            <Project className="col-span-6 row-span-6 aspect-square" 
+              projectName="Adloc"
+              projectDescription="Fast and robust earthquake location"
+              projectContent={<AdlocContent />}
+              image={adloc}
+              tags={["Seismology", "Research"]}
+            />
+
             <Catchup className="col-span-6 row-span-3 aspect-[2/1]" />
+
+            {/* <Project className="col-span-6 row-span-6 aspect-square" 
+              projectName="GaMMA-1D"
+              projectDescription=""
+              projectContent={<AdlocContent />}
+              image={adloc}
+              tags={["Seismology", "Machine Learning"]}
+            /> */}
             
+
+
           </div>
         </div>
         <footer className="fixed bottom-0 w-full text-center p-2 text-sm text-gray-500 bg-[#FFFEFB] z-[51]">

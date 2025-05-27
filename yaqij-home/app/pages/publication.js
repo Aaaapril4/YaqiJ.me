@@ -1,7 +1,7 @@
-import Block from "@/app/ui/block"
+import Block from "@/app/components/block"
 import { MdOutlineArticle } from "react-icons/md";
-import PublicationContent from "@/app/content/publication.mdx";
-import { Popup } from "@/app/ui/popup";
+import PublicationContent from "@/app/contents/publication.mdx";
+import { Popup } from "@/app/components/popup";
 
 const PublicationBlock = ({ className }) => {
     return (

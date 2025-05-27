@@ -1,7 +1,7 @@
-import Block from "@/app/ui/block"
+import Block from "@/app/components/block"
 import { RiArrowDownWideFill } from "react-icons/ri";
-import IntroContent from "@/app/content/intro.mdx";
-import { Popup } from "@/app/ui/popup";
+import IntroContent from "@/app/contents/intro.mdx";
+import { Popup } from "@/app/components/popup";
 
 const IntroBlock = ({ className }) => {
     return (

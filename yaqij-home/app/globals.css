@@ -114,3 +114,26 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;  /* Hides the scrollbar */
 }
+
+/* KaTeX equation styling */
+.katex-display {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+.katex {
+  font-family: 'KaTeX_Math', 'Times New Roman', serif;
+}
+
+/* For inline equations */
+.katex-inline {
+  font-size: 1em;
+}
+
+/* For display equations */
+.katex-display > .katex {
+  font-size: 1.05em;
+  text-align: center;
+  display: block;
+  margin: 0.5em 0;
+}

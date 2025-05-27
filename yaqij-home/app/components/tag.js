@@ -7,6 +7,7 @@ const Tag = ({ tags, className }) => {
         "Tailwind CSS": "bg-green-100",
         "Seismology": "bg-orange-50",
         "Machine Learning": "bg-red-50",
+        "Research": "bg-red-50",
     }
     return (
         <div className={`flex flex-wrap gap-2 mb-2 ${className}`}>

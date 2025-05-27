@@ -1,7 +1,7 @@
-import Block from "@/app/ui/block"
+import Block from "@/app/components/block"
 import { FaGraduationCap } from "react-icons/fa6";
-import EducationContent from "@/app/content/education.mdx";
-import { Popup } from "@/app/ui/popup";
+import EducationContent from "@/app/contents/education.mdx";
+import { Popup } from "@/app/components/popup";
 
 const EducationBlock = ({ className }) => {
     return (

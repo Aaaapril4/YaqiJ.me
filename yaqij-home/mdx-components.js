@@ -24,6 +24,9 @@ export function useMDXComponents(components) {
         {...props}
       />
     ),
+    hr: ({ className, ...props }) => (
+      <hr className={`my-8 w-1/3 mx-auto border-t-1 border-gray-300 ${className}`} {...props} />
+    ),
     ...components,
   }
 }

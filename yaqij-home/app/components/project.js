@@ -1,5 +1,5 @@
-import Block from "@/app/ui/block"
-import { Popup } from "@/app/ui/popup";
+import Block from "@/app/components/block"
+import { Popup } from "@/app/components/popup";
 import Image from "next/image";
 import Tag from "@/app/components/tag";
 

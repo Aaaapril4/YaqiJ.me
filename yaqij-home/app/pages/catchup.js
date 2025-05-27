@@ -1,7 +1,7 @@
-import Block from "@/app/ui/block"
+import Block from "@/app/components/block"
 import { MdTipsAndUpdates } from "react-icons/md";
-import CatchupContent from "@/app/content/catchup.mdx";
-import { Popup } from "@/app/ui/popup";
+import CatchupContent from "@/app/contents/catchup.mdx";
+import { Popup } from "@/app/components/popup";
 
 const CatchupBlock = ({ className }) => {
     return (
