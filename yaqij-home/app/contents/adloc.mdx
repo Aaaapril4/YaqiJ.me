@@ -1,8 +1,8 @@
 import Tag from "@/app/components/tag";
-import Icons from "@/app/components/icons";
+import Icon from "@/app/components/icon";
 
 # Fast and Robust Earthquake Location
-<Tag tags = {["Seismology", "Research"]} className="mt-[-1.2rem] mb-3"/>
+<Tag tags = {["Seismology", "Optimization", "Python", "PyTorch"]} className="mt-[-1.2rem] mb-3"/>
 
 **Collaborators: Weiqiang Zhu, Bo Rong, S. Shawn Wei**
 
@@ -18,4 +18,4 @@ Adloc's core functionality involves minimizing the misfit between observed and t
 - Employing the Huber loss function ($\mathcal{L(t_i, \hat{t_i})}$) to reduce sensitivity to outliers often present in seismic data due to velocity structure variances.
 - Utilizing the L-BFGS algorithm for efficient non-linear optimization of the location parameters with gradients computed using automatic differentiation in PyTorch.
 ---
-<Icons links = {{"github": "https://github.com/AI4EPS/ADLoc", "paper": "https://arxiv.org/abs/2502.10933"}}/>
+<Icon links = {{"github": "https://github.com/AI4EPS/ADLoc", "paper": "https://arxiv.org/abs/2502.10933"}}/>

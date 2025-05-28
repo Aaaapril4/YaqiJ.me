@@ -1,13 +1,10 @@
 const Tag = ({ tags, className }) => {
     const colorMap = {
-        "Python": "bg-blue-100",
-        "JavaScript": "bg-yellow-100",
-        "React": "bg-blue-100",
-        "Next.js": "bg-black",
-        "Tailwind CSS": "bg-green-100",
+        "Python": "bg-blue-50",
+        "PyTorch": "bg-purple-50",
         "Seismology": "bg-orange-50",
         "Machine Learning": "bg-red-50",
-        "Research": "bg-red-50",
+        "Optimization": "bg-yellow-50",
     }
     return (
         <div className={`flex flex-wrap gap-2 mb-2 ${className}`}>

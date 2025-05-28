@@ -4,8 +4,7 @@ import { useState } from "react";
 import { Container, Flex, Text, Box } from "@radix-ui/themes"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/avatar"
-import Icons from "@/app/components/icons";
-import Contacts from "@/app/pages/contacts";
+import Icon from "@/app/components/icon";
 
 
 const Side = ({ className }) => {
@@ -55,7 +54,7 @@ const Side = ({ className }) => {
                         <Text className="ml-4">🥘 🏂 ✨ 🐱</Text>
                     </Flex>
 
-                    <Icons className={`transition-all duration-500 ease-in-out transform ${isExpanded ? 'mt-4 -translate-y-4' : 'mt-4 translate-y-0'}`} 
+                    <Icon className={`transition-all duration-500 ease-in-out transform ${isExpanded ? 'mt-4 -translate-y-4' : 'mt-4 translate-y-0'}`} 
                         links = {{"email": "mailto:april.jyq@gmail.com", "github": "https://github.com/Aaaapril4", "googlescholar": "https://scholar.google.com/citations?user=X1SoTQcAAAAJ", "linkedin": "https://www.linkedin.com/in/yaqi-jie"}}
                     />
                 </Container>

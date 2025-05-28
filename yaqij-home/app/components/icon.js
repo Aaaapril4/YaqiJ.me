@@ -14,7 +14,7 @@ const iconMap = {
     'paper': RiArticleLine,
 }
 
-const Icons = ({ className, links }) => {
+const Icon = ({ className, links }) => {
 
     return (
         <div className={`${className || ''} flex flex-row gap-12 justify-center`}>
@@ -34,4 +34,4 @@ const Icons = ({ className, links }) => {
     )
 }
 
-export default Icons;
+export default Icon;

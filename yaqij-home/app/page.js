@@ -38,7 +38,7 @@ export default function Home() {
               projectDescription="Fast and robust earthquake location"
               projectContent={<AdlocContent />}
               image={adloc}
-              tags={["Seismology", "Research"]}
+              tags={["Seismology", "Optimization"]}
             />
 
             <Catchup className="col-span-6 row-span-3 aspect-[2/1]" />
