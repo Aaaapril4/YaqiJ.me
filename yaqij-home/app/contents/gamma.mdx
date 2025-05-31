@@ -8,7 +8,7 @@ import gamma from "@/app/images/gamma1.png";
 
 **Collaborators: Weiqiang Zhu, S. Shawn Wei**
 
-Earthquake association is the process of assigning individual seismic signals recorded by sensors to a specific earthquake event and then determining the event's precise location and origin time. The work improves upon GaMMA, a foundational algorithm that uses a Gaussian Mixture Model (GMM) to calculate these assignments and locations. Our contributions significantly boost the accuracy and performance.
+Earthquake association is the process of assigning individual seismic signals recorded by sensors to a specific earthquake event and then determining the event's precise location and origin time. The work improves upon [GaMMA](https://doi.org/10.1029/2021JB023249), a foundational algorithm that uses a Gaussian Mixture Model (GMM) to calculate these assignments and locations. Our contributions significantly boost the accuracy and performance.
 
 We improved the algorithm by enhancing earthquake location accuracy with a multi-dimensional velocity structure and by refining the estimation of the assigning score. The location is determined by minimizing an objective function using the BFGS algorithm in SciPy. To maintain clean dependencies, gradients for this optimization are efficiently estimated by interpolating pre-calculated travel time field derivatives, with the components defined as:
 $$
@@ -31,8 +31,8 @@ Rigorous testing using a two-month dataset, benchmarked against manually associa
 
 <Image 
   src={gamma}
-  width={4448}
-  height={1509}
+  width={1112}
+  height={377}
   alt="test_result"
   className="rounded-lg"
 />
