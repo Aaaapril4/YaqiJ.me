@@ -37,7 +37,7 @@ export default function Home() {
 
             <Project className="col-span-6 row-span-6 aspect-square" 
               projectName="Adloc"
-              projectDescription="Fast and robust earthquake location"
+              projectDescription="Fast and Robust Earthquake Location"
               projectContent={<AdlocContent />}
               image={adloc}
               tags={["Seismology", "Optimization"]}
