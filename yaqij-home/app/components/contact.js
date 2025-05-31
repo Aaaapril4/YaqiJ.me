@@ -1,12 +1,10 @@
-'use client';
-
 import Link from 'next/link';
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaGoogleScholar, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { RiArticleLine } from "react-icons/ri";
 
 
-const Icon = ({ className, links }) => {
+const Contact = ({ className, links }) => {
     const iconMap = {
         'email': MdOutlineAlternateEmail,
         'github': FaGithub,
@@ -32,4 +30,4 @@ const Icon = ({ className, links }) => {
     )
 }
 
-export default Icon;
+export default Contact;
