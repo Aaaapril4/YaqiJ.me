@@ -5,7 +5,6 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import { FaGoogleScholar, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { RiArticleLine } from "react-icons/ri";
 
-
 const iconMap = {
     'email': MdOutlineAlternateEmail,
     'github': FaGithub,
@@ -14,8 +13,7 @@ const iconMap = {
     'paper': RiArticleLine,
 }
 
-const Icon = ({ className, links }) => {
-
+export default function Icon({ className, links }) {
     return (
         <div className={`${className || ''} flex flex-row gap-12 justify-center`}>
             {Object.entries(links).map(([key, url]) => {
@@ -33,5 +31,3 @@ const Icon = ({ className, links }) => {
         </div>
     )
 }
-
-export default Icon;
