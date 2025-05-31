@@ -20,7 +20,7 @@ PopoverContent.displayName = PopoverPrimitive.Content.displayName
 
 const PopoverClose = PopoverPrimitive.Close
 
-const Popup = ({ trigger, content, className, title, description, image = null }) => {
+const Popup = ({ trigger, content, className, title, description, image = null, imagePosition = 70 }) => {
   return (
     <Popover>
         <PopoverAnchor asChild>
@@ -46,7 +46,7 @@ const Popup = ({ trigger, content, className, title, description, image = null }
                             className="w-full h-full object-cover saturate-80 opacity-80" 
                             style={{
                                 // maskImage: 'linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%)',
-                                objectPosition: 'center 70%'
+                                objectPosition: `center ${imagePosition || 70}%`
                             }}
                         />
                     </div>

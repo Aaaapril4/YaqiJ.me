@@ -1,0 +1,47 @@
+import Tag from "@/app/components/tag";
+import Icon from "@/app/components/icon";
+import Image from "next/image";
+import gamma from "@/app/images/gamma1.png";
+
+# A GMM Seismic Associator with Enhanced Earthquake Location
+<Tag tags = {["Seismology", "Machine Learning", "Python"]} className="mt-[-1.2rem] mb-3"/>
+
+**Collaborators: Weiqiang Zhu, S. Shawn Wei**
+
+Earthquake association is the process of assigning individual seismic signals recorded by sensors to a specific earthquake event and then determining the event's precise location and origin time. The work improves upon GaMMA, a foundational algorithm that uses a Gaussian Mixture Model (GMM) to calculate these assignments and locations. Our contributions significantly boost the accuracy and performance.
+
+We improved the algorithm by enhancing earthquake location accuracy with a multi-dimensional velocity structure and by refining the estimation of the assigning score. The location is determined by minimizing an objective function using the BFGS algorithm in SciPy. To maintain clean dependencies, gradients for this optimization are efficiently estimated by interpolating pre-calculated travel time field derivatives, with the components defined as:
+$$
+    \mathcal{\nabla_{(x,y,z,\hat{t})} = \left[ 
+    \frac{x \partial \hat{t}}{r \partial r},
+    \frac{y \partial \hat{t}}{r \partial r},
+    \frac{\partial \hat{t}}{\partial z},
+    1 \right]
+    \cdot
+    \left\{
+        \begin{aligned}
+        &\hat{t} - t, & |\hat{t} - t| \le \delta \\
+        &\delta \cdot \mathrm{sgn} (\hat{t} - t), & |\hat{t} - t| \ge \delta
+        \end{aligned}
+    \right\}}
+$$ 
+This work on advanced location estimation later evolved into a separate project (Adloc) that utilizes automatic differentiation.
+
+Rigorous testing using a two-month dataset, benchmarked against manually associated data, demonstrated substantial improvements. The system achieved a dramatic increase in F1 score, rising from 0.79 to 0.97, highlighting significantly improved precision and overall robustness in the seismic signal association process. Furthermore, the optimized version showcased impressive high-throughput capabilities, efficiently processing over 9,000,000 seismic samples in just 2 hours while utilizing only 20 CPU cores, underscoring its scalability and efficiency in handling large datasets.
+
+<Image 
+  src={gamma}
+  width={4448}
+  height={1509}
+  className="rounded-lg"
+/>
+
+Additional Engineering & Performance Optimizations:
+
+- Reduced Latency: Implemented precomputation and caching for the travel time estimation, minimizing delays for this critical and frequently accessed component.
+- Optimized Parallel Processing: Developed a CPU-based parallel system (Python multiprocessing) with a size-aware scheduling strategy, intelligently distributing large data clusters to prevent memory bottlenecks and processing smaller clusters in optimized chunks to balance load and maximize speed.
+- Accelerated Core Computations: Refactored key Python functions and leveraged Numba (a JIT compiler) to achieve near-native execution speeds for computationally intensive tasks.
+- Efficient Resource Management: Engineered a robust data pipeline with stringent memory controls, including on-demand array management, systematic resource cleanup (especially after operations like DBSCAN clustering), deadlock prevention in multiprocessing, and dynamic data chunk sizing to optimize memory usage and processing speed.
+
+---
+<Icon links = {{"github": "https://github.com/AI4EPS/GaMMA"}}/>

@@ -31,7 +31,7 @@ const ProjectBlock = ({ className, image, projectName, projectDescription, tags 
     )
 }
 
-const Project = ({ className, image, projectName, projectDescription, projectContent, tags }) => {
+const Project = ({ className, image, projectName, projectDescription, projectContent, tags, imagePosition = 70 }) => {
     return (
         <Popup 
             className={`${className}`}
@@ -47,6 +47,7 @@ const Project = ({ className, image, projectName, projectDescription, projectCon
             title={projectName}
             description={projectDescription}
             image={image}
+            imagePosition={imagePosition}
       />
     )
 }

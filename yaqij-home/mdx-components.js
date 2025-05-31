@@ -12,7 +12,7 @@ export function useMDXComponents(components) {
       <ul className={`list-disc pl-6 space-y-2 ${className}`} {...props}>{children}</ul>
     ),
     p: ({ children, className, ...props }) => (
-        <p className={`my-4 ${className}`} {...props}>{children}</p>
+        <p className={`my-4 text-justify ${className}`} {...props}>{children}</p>
     ),
     a: ({ children, href, className, ...props }) => (
       <a href={href} className={`hover:border-b-2 hover:border-orange-500 ${className}`} target="_blank" {...props}>{children}</a>
@@ -21,6 +21,7 @@ export function useMDXComponents(components) {
       <Image
         sizes="100vw"
         style={{ width: '100%', height: 'auto' }}
+        width={1000}
         {...props}
       />
     ),

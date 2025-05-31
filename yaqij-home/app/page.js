@@ -10,7 +10,9 @@ import Publication from "@/app/pages/publication";
 import Catchup from "@/app/pages/catchup";
 import Project from "@/app/components/project";
 import adloc from "@/app/images/adloc.jpeg";
+import gamma from "@/app/images/gamma.png";
 import AdlocContent from "@/app/contents/adloc.mdx";
+import GammaContent from "@/app/contents/gamma.mdx";
 
 export default function Home() {
   return (
@@ -43,13 +45,14 @@ export default function Home() {
 
             <Catchup className="col-span-6 row-span-3 aspect-[2/1]" />
 
-            {/* <Project className="col-span-6 row-span-6 aspect-square" 
+            <Project className="col-span-6 row-span-6.3 aspect-[6/6.3]" 
               projectName="GaMMA-1D"
-              projectDescription=""
-              projectContent={<AdlocContent />}
-              image={adloc}
+              projectDescription="A GMM Seismic Associator with Enhanced Earthquake Location"
+              projectContent={<GammaContent />}
+              image={gamma}
               tags={["Seismology", "Machine Learning"]}
-            /> */}
+              imagePosition={20}
+            />
             
 
 
