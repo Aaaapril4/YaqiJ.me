@@ -51,7 +51,7 @@ export default function Home() {
               projectContent={<GammaContent />}
               image={gamma}
               tags={["Seismology", "Machine Learning"]}
-              imagePosition={20}
+              imagePosition={40}
             />
             
 
